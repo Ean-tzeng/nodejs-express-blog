@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <span> <%= sub_title %><span><a href='/login'>[登入]</a><a href='/'>[回首頁]</a>
+    <div>
+      <form action='sign_up' method='post'>
+        <label>帳號:</label>
+        <input type='text' name='username'><br>
+        <label>密碼:</label>
+        <input type='password' name='password'><br>
+        <button type='subtmit'>註冊</button>
+      </form>
+      <div style='color:red'>
+        <%= message %>
+      </div>
+    </div>
+  </body>
+</html>

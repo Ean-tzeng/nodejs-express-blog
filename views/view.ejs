@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <span> <%= sub_title %><span><a href='/'>[回首頁]</a><a href='/edit/<%= post._id %>'>[編輯文章]</a><a href='/delete/<%= post._id %>'>[刪除文章]</a>
+    <div>
+      <h2>
+        <%= post.title %><br>
+      </h2>
+      <span style='color:blue'>
+        <%= post.author %>
+      </span>建立於<%= post.createdAt %>
+    </div>
+    <div>
+      <p>
+        <%= post.content %>
+      </p>  
+    </div>
+  </body>
+</html>

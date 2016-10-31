@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <span><%= sub_title %> </span><a href='/'>[回首頁]</a>
+    <form action = "/edit/<%= post._id %>" method = "post" >  
+			<div style="margin:10px;">
+				<label style="margin:10px">標題</label>
+				<input type='text' name='title' value=<%= post.title %>>
+			</div>
+			<div style="margin:10px; vertical-align:text-top;">
+				<label style="margin:10px;">內容</label>
+				<textarea name='content' rows="10" cols="50"><%= post.content %></textarea>
+			</div>
+			<button type='submit'>編輯文章</button>
+		</form>
+  </body>
+</html>
